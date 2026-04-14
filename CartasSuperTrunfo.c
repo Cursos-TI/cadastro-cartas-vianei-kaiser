@@ -40,6 +40,7 @@ scanf("%f", &pib); //variáveis tipo float, necessitam do operador &
 printf("Escreva o N de pontos turisticos:\n");
 scanf("%i", &pt); //variáveis tipo int, necessitam do operador &
 //**********************************************************
+printf("========RESULTADO============\n");
 printf("Carta: %i \n", carta); 
 printf("Estado: %s \n", estado);
 printf("Código: %s",codigo); //concatenando sem usar funções, aqui não foi feita a quebra de linha para juntar as variáveis
@@ -50,4 +51,4 @@ printf("População: %.2f \n", populacao);
 printf("Área: %.2f km²\n", area);
 printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não precisa do & ****
 printf("Número de pontos turísticos: %i \n", pt);
-printf("************** FIM **********************\n");
+printf("************** FIM ************************\n");
