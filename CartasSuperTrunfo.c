@@ -43,10 +43,8 @@ scanf("%i", &pt); //variáveis tipo int, necessitam do operador &
 printf("========RESULTADO============\n");
 printf("Carta: %i \n", carta); 
 printf("Estado: %s \n", estado);
-printf("Código: %s",codigo); //concatenando sem usar funções, aqui não foi feita a quebra de linha para juntar as variáveis
-printf("%s \n",codigo);//concatenando sem usar funções
-
-printf("Nome da Cidade: %s \n", cidade); // Isso só lê uma palavra (ex: "Porto" e ignora "Alegre") - USAR --> scanf(" %[^\n]", cidade); 
+printf("Código: %s",estado, "%s\n\n", codigo); //concatenando sem usar funções, aqui não foi feita a quebra de linha para juntar as 
+pintf("Nome da Cidade: %s \n", cidade);
 printf("População: %.2f \n", populacao);
 printf("Área: %.2f km²\n", area);
 printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não precisa do & ****
