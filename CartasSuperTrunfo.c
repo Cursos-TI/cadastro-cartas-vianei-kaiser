@@ -18,6 +18,7 @@ printf("**************************************\n");
 
 printf("Escreva o numero da carta:\n");
 scanf("%i", &carta); //sintaxe "i" serve valores inteiros
+
 printf("Escreva o estado com uma letra(de A - H):\n");
 scanf("%s", estado);  //sintaxe "%s" serve string
 
@@ -30,7 +31,7 @@ scanf("%s", cidade); //sintaxe "s" serve para especificar strings com mais letra
 printf("Escreva a população em milhares(ex:10.000):\n");
 scanf("%f", &populacao); //sintaxe "%f FLOAT para numeros quebrados
 
-pintf("Escreva a area em milhares(ex:10.000):\n");
+printf("Escreva a area em milhares(ex:10.000):\n");
 scanf("%f", &area);
 
 printf("Escreva o PIB em milhares(ex:10.000):\n");
@@ -41,12 +42,12 @@ scanf("%i", &pt); //variáveis tipo int, necessitam do operador &
 //**********************************************************
 printf("Carta: %i \n", carta); 
 printf("Estado: %s \n", estado);
-printf("Código: %s",estado); //concatenando sem usar funções, aqui não foi feita a quebra de linha para juntar as variáveis
+printf("Código: %s",codigo); //concatenando sem usar funções, aqui não foi feita a quebra de linha para juntar as variáveis
 printf("%s \n",codigo);//concatenando sem usar funções
 
-pintf("Nome da Cidade: %s \n", cidade);
+printf("Nome da Cidade: %s \n", cidade); // Isso só lê uma palavra (ex: "Porto" e ignora "Alegre") - USAR --> scanf(" %[^\n]", cidade); 
 printf("População: %.2f \n", populacao);
 printf("Área: %.2f km²\n", area);
 printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não precisa do & ****
 printf("Número de pontos turísticos: %i \n", pt);
-
+printf("************** FIM **********************\n");
