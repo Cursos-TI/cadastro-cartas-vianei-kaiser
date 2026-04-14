@@ -6,6 +6,7 @@ int main() {
 // Área para definição das variáveis para armazenar as propriedades das cidades
 // Area para entrada de dados
 // Área para exibição dos dados da cidade
+// Área para exibição dos dados da cidade
 
 char estado[20], codigo[10], cidade[20];//o valor entre chaves especificaa quantidade máxima  de caracteres da variável
 int pt, carta;
@@ -48,5 +49,4 @@ printf("População: %.2f \n", populacao);
 printf("Área: %.2f km²\n", area);
 printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não precisa do & ****
 printf("Número de pontos turísticos: %i \n", pt);
-printf("************** FIM ************************\n\n");
 
