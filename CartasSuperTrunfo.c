@@ -51,6 +51,5 @@ printf("População: %.2f \n", populacao);
 printf("Área: %.2f km²\n", area);
 printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não precisa do & ****
 printf("Número de pontos turísticos: %i \n", pt);
-
 printf("************** FIM ************************\n\n");
 
