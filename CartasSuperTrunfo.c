@@ -9,9 +9,9 @@ int main() {
     // Variáveis numéricas com casas decimais
     float pib, area, populacao;
 
-    printf("**************************************\n");
+    printf("######################################\n");
     printf("********* DESAFIOS CARTAS ************\n");
-    printf("**************************************\n");
+    printf("######################################\n");
 
     printf("Escreva o numero da carta:\n");
     scanf("%i", &carta);
