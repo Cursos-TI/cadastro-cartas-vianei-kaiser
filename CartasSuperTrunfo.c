@@ -51,3 +51,7 @@ printf("PIB: %.2f R$\n ", pib);//pib não é uma variável tipo INT - *** não p
 printf("Número de pontos turísticos: %i \n", pt);
 printf("************** FIM ************************\n");
 printf(" -- ");
+
+
+return 0;
+}
