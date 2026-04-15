@@ -41,7 +41,7 @@ scanf("%f", &pib); //variáveis tipo float, necessitam do operador &
 printf("Escreva o N de pontos turisticos:\n");
 scanf("%i", &pt); //variáveis tipo int, necessitam do operador &
 
-//**********************************************************
+//*************************************************
 printf("========RESULTADO============\n");
 printf("Carta: %i \n", carta); 
 printf("Estado: %s \n", estado);
