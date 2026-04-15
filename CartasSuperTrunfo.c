@@ -47,7 +47,7 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f R$\n", pib);
     printf("Número de pontos turísticos: %i \n", pt);
-    printf("========== FIM =============\n");
+    printf("************** FIM ************************\n");
 
     return 0; / Indica que o programa terminou corretamente
 }
