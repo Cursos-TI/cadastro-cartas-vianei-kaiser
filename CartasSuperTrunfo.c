@@ -1,9 +1,12 @@
 #include <stdio.h>
 
 int main() {
+    // Função principal onde o programa começa
 
     char estado[20], codigo[10], cidade[50];
     int pt, carta;
+
+    // Variáveis numéricas com casas decimais
     float pib, area, populacao;
 
     printf("**************************************\n");
@@ -12,6 +15,7 @@ int main() {
 
     printf("Escreva o numero da carta:\n");
     scanf("%i", &carta);
+    // %i lê inteiro | & pega o endereço da variável
 
     printf("Escreva o estado com uma letra(de A - H):\n");
     scanf("%s", estado);
@@ -20,10 +24,10 @@ int main() {
     scanf("%s", codigo);
 
     printf("Escreva o nome da cidade:\n");
-    scanf(" %[^\n]", cidade);
+    scanf(" %[^\n]", cidade); // Lê texto com espaço (ex: Porto Alegre)
 
     printf("População (use ponto, ex: 10000.50):\n");
-    scanf("%f", &populacao);
+    scanf("%f", &populacao); // %f lê número decimal (float)
 
     printf("Área (use ponto, ex: 15000.50):\n");
     scanf("%f", &area);
@@ -43,7 +47,7 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f R$\n", pib);
     printf("Número de pontos turísticos: %i \n", pt);
-    printf("************** FIM ************************\n");
+    printf("========== FIM =============\n");
 
-    return 0;
+    return 0; / Indica que o programa terminou corretamente
 }
