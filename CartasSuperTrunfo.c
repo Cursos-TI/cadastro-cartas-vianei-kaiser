@@ -56,7 +56,7 @@ int main() {
     pib_per_capita1 = pib1/populacao1;
 
     // Entrada dos Dados ***Carta2****
-    printf("\n---[CADASTRO -   | Carta 2]");
+    printf("\n\n---[CADASTRO -   | Carta 2]");
     printf("\nDigite o Estado (Letra 'A' a 'H'): ");
     scanf(" %c",&estado2); 
     printf("\nCodigo da Carta (ex: A01, B03): ");
