@@ -20,7 +20,7 @@ int main() {
                 srand(time(0));
                 numeroSecreto = rand() % 10 + 1;
 
-                printf("Adivinhe o número (entre 1 e 10): \n");
+                printf("Adivinhe o número (entre 1 e 10): ");
                 scanf("%d", &palpite);
 
                 if (palpite == numeroSecreto) {
