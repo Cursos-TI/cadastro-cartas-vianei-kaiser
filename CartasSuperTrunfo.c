@@ -115,5 +115,68 @@ int main() {
    
     printf("\n============ fim ================\n\n");
 
+    // COMPARAR CARTAS
+
+    printf("--------------------------------------\n");
+    printf("********* BATALHA DAS CARTAS**********\n");
+    printf("--------------------------------------\n");
+
+    if (populacao1 > populacao2){
+        printf("A população da carta 1 venceu!\n");
+    }
+    else{
+        printf("A população da carta 2 venceu!\n");
+    }
+    
+    // Atributo area
+    if (area1 > area2){
+        printf("A área da carta 1 venceu!\n");
+    }
+    else{
+        printf("A área da carta 2 venceu!\n");
+    }
+
+    // Atributo PIB 
+    if (pib1 > pib2){
+        printf("O PIB da carta 1 venceu!\n");
+    }
+    else{
+        printf("O PIB da carta 2 venceu!\n");
+    }
+
+    // Atributo pontos turísticos 
+    if (numero_pontos_turisticos1 > numero_pontos_turisticos2){
+        printf("Os pontos turísticos da carta 1 venceu!\n");
+    }
+    else{
+        printf("Os pontos turísticos da carta 2 venceu!\n");
+    }
+
+    // Atributo densidade populacional 
+    if (numero_pontos_turisticos1 > numero_pontos_turisticos2){
+        printf("A densidade populacional da carta 1 venceu!\n");
+    }
+    else{
+        printf("A densidade populacional da carta 2 venceu!\n");
+    }
+    
+    // Atributo PIB per capta 
+    if (pib_per_capita1 > pib_per_capita2){
+        printf("O PIB per capta da carta 1 venceu!\n");
+    }
+    else{
+        printf("O PIB per capta da carta 2 venceu!\n");
+    }
+
+    // Atributo super poder 
+    if (superpoder1 > superpoder2){
+        printf("O super poder da carta 1 venceu!\n");
+    }
+    else{
+        printf("O super poder da carta 2 venceu!\n");
+    }
+       
+    
+
     return 0; // Indica que o programa terminou corretamente
 }
