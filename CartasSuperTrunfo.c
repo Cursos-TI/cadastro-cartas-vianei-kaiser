@@ -38,11 +38,11 @@ int main() {
 
     // Entrada dos Dados ***Carta1****
     printf("\n---[CADASTRO -   | Carta 1]");
-    printf("\nDigite o Estado (Letra 'A' a 'H'): ");
+    printf("Digite o Estado (Letra 'A' a 'H'): ");
     scanf(" %c",&estado1); 
-    printf("\nCodigo da Carta (01, 02): ");
+    printf("Codigo da Carta (01, 02): ");
     scanf(" %3s", &codigo_carta1);
-    printf("\nNome da Cidade: ");
+    printf("Nome da Cidade: ");
     getchar(); //Limpa o \n do buffer antes de fgets
     fgets(nome_cidade1, sizeof(nome_cidade1), stdin); //Cadastra o nome da cidade
     nome_cidade1[strcspn(nome_cidade1, "\n")] = '\0'; // remove \n do final
@@ -52,7 +52,7 @@ int main() {
     scanf("%f",&area1);
     printf("\nO Produto Interno Bruto da cidade: ");
     scanf("%f",&pib1);
-    printf("\nA quantidade de Pontos Turisticos:");
+    printf("\nA quantidade de Pontos Turisticos: ");
     scanf("%d", &numero_pontos_turisticos1);
     densidade1 = populacao1/area1;
     pib_per_capita1 = pib1/populacao1;
@@ -74,7 +74,7 @@ int main() {
     scanf("%f",&area2);
     printf("\nO Produto Interno Bruto da cidade: ");
     scanf("%f",&pib2);
-    printf("\nA quantidade de Pontos Turisticos:");
+    printf("\nA quantidade de Pontos Turisticos: ");
     scanf("%d", &numero_pontos_turisticos2);
     densidade2 = populacao2/area2;
     pib_per_capita2 = pib2/populacao2;
