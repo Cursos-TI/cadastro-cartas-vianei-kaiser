@@ -16,6 +16,7 @@ int main() {
     int numero_pontos_turisticos1;
     float pib_per_capita1;
     float densidade1;
+    float superpoder1;
 
     // Carta 2
     char estado2;
@@ -27,6 +28,7 @@ int main() {
     int numero_pontos_turisticos2;
     float densidade2;
     float pib_per_capita2;
+    float superpoder2;
 
 
 
@@ -54,6 +56,7 @@ int main() {
     scanf("%d", &numero_pontos_turisticos1);
     densidade1 = populacao1/area1;
     pib_per_capita1 = pib1/populacao1;
+    superpoder1 = (float)populacao1+area1+pib1+(float)numero_pontos_turisticos1+pib_per_capita1+(1.0/densidade1);
 
     // Entrada dos Dados ***Carta2****
     printf("\n\n---[CADASTRO -   | Carta 2]");
@@ -75,7 +78,7 @@ int main() {
     scanf("%d", &numero_pontos_turisticos2);
     densidade2 = populacao2/area2;
     pib_per_capita2 = pib2/populacao2;
-
+    superpoder2 = (float)populacao2+area2+pib2+(float)numero_pontos_turisticos2+pib_per_capita2+(1.0/densidade2);
 
     /*Após o usuário inserir os dados das cartas, programa deve exibir na tela as informações cadastradas, 
     de forma organizada e legível. Para cada carta, imprima cada 
@@ -92,6 +95,7 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", numero_pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: R$ %.2f\n", pib_per_capita1);
+    printf("Superpoder1: %.2f\n",superpoder1);
 
 
     //Carta 2
@@ -105,6 +109,7 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", numero_pontos_turisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: R$ %.2f\n", pib_per_capita2);
+    printf("Superpoder2: %.2f\n",superpoder2);
 
     // Finalizador do Sistema
    
