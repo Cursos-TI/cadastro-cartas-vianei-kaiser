@@ -19,7 +19,7 @@ int main() {
 
     // Carta 2
     char estado2;
-    char codigo_carta2[2];
+    char codigo_carta2[4];
     char nome_cidade2[50];
     int populacao2;
     float area2;
