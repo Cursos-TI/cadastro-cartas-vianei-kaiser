@@ -8,7 +8,7 @@ int main() {
 
     // Função principal onde o programa começa
     char estado1;
-    char codigo_carta1[1];
+    char codigo_carta1[4];
     char nome_cidade1[50];
     int populacao1;
     float area1;
@@ -19,7 +19,7 @@ int main() {
 
     // Carta 2
     char estado2;
-    char codigo_carta2[1];
+    char codigo_carta2[4];
     char nome_cidade2[50];
     int populacao2;
     float area2;
@@ -43,7 +43,7 @@ int main() {
     printf("\nNome da Cidade: ");
     getchar(); //Limpa o \n do buffer antes de fgets
     fgets(nome_cidade1, sizeof(nome_cidade1), stdin); //Cadastra o nome da cidade
-    nome_cidade1[strcspn(nome_cidade1, "" )] = '\0'; // remove \n do final
+    nome_cidade1[strcspn(nome_cidade1, "\n")] = '\0'; // remove \n do final
     printf("\nO numero de Habitantes: ");
     scanf("%d", &populacao1);
     printf("\nA area da cidade em Quilometros Quadrados: ");
@@ -64,7 +64,7 @@ int main() {
     printf("\nNome da Cidade: ");
     getchar(); //Limpa o \n do buffer antes de fgets
     fgets(nome_cidade2, sizeof(nome_cidade2), stdin); //Cadastra o nome da cidade
-    nome_cidade2[strcspn(nome_cidade2, "" )] = '\0'; // remove \n do final
+    nome_cidade2[strcspn(nome_cidade2, "\n")] = '\0'; // remove \n do final
     printf("\nO numero de Habitantes: ");
     scanf("%d", &populacao2);
     printf("\nA area da cidade em Quilometros Quadrados: ");
