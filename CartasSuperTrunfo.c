@@ -19,7 +19,7 @@ int main() {
 
     // Carta 2
     char estado2;
-    char codigo_carta2[4];
+    char codigo_carta2[2];
     char nome_cidade2[50];
     int populacao2;
     float area2;
@@ -38,7 +38,7 @@ int main() {
     printf("\n---[CADASTRO -   | Carta 1]");
     printf("\nDigite o Estado (Letra 'A' a 'H'): ");
     scanf(" %c",&estado1); 
-    printf("\nCodigo da Carta (ex: A01, B03): ");
+    printf("\nCodigo da Carta (01, 02): ");
     scanf(" %3s", &codigo_carta1);
     printf("\nNome da Cidade: ");
     getchar(); //Limpa o \n do buffer antes de fgets
@@ -59,7 +59,7 @@ int main() {
     printf("\n\n---[CADASTRO -   | Carta 2]");
     printf("\nDigite o Estado (Letra 'A' a 'H'): ");
     scanf(" %c",&estado2); 
-    printf("\nCodigo da Carta (ex: A01, B03): ");
+    printf("\nCodigo da Carta (ex: 01, 03): ");
     scanf(" %3s", &codigo_carta2);
     printf("\nNome da Cidade: ");
     getchar(); //Limpa o \n do buffer antes de fgets
@@ -91,7 +91,7 @@ int main() {
     printf("PIB: R$ %.2f\n",pib1);
     printf("Numero de Pontos Turisticos: %d\n", numero_pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-    printf("PIB per Capita: R$%.2f\n", pib_per_capita1);
+    printf("PIB per Capita: R$ %.2f\n", pib_per_capita1);
 
 
     //Carta 2
@@ -104,7 +104,7 @@ int main() {
     printf("PIB: R$ %.2f\n",pib2);
     printf("Numero de Pontos Turisticos: %d\n", numero_pontos_turisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
-    printf("PIB per Capita: R$%.2f\n", pib_per_capita2);
+    printf("PIB per Capita: R$ %.2f\n", pib_per_capita2);
 
     // Finalizador do Sistema
    
