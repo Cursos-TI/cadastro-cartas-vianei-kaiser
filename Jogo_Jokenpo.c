@@ -73,8 +73,8 @@ int main() {
         } 
         // Caso contrário, o computador vence
         else {
-            printf("Computador venceu!\n");
-            printf("\a");
+            printf("\033[32mVoce venceu!\033[0m\n"); \\ texto com COR vermelha
+            printf("\a\a"); \\ DAR UM BEEP
             totcpu++; // incrementa vitória do computador
         }
     }
