@@ -1,49 +1,67 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>   // Biblioteca de entrada e saída (printf, scanf)
+#include <stdlib.h>  // Biblioteca para rand() e srand()
+#include <time.h>    // Biblioteca para usar o tempo como semente aleatória
 
 int main() {
-    int jogador, cpu;
 
-    // Inicializa o gerador de números aleatórios com base no tempo
+    int jogador, cpu;           // Variáveis para armazenar escolha do jogador e do computador
+    int jogar_novamente;        // Controle do loop (se o usuário quer continuar)
+
+    // Vetor de strings com as opções do jogo
+    // Índices: 0 = Pedra | 1 = Papel | 2 = Tesoura
+    char *opcoes[] = {"Pedra", "Papel", "Tesoura"};
+
+    // Inicializa o gerador de números aleatórios com base no tempo atual
     srand(time(NULL));
 
-    printf("--- Jokenpo ---\n");
-    printf("Escolha uma opcao:\n");
-    printf("1 - Pedra\n");
-    printf("2 - Papel\n");
-    printf("3 - Tesoura\n");
-    printf("Opcao: [");
-    scanf("%d]", &jogador);
+    // Início do loop (executa pelo menos uma vez)
+    do {
 
-    // Validação da entrada
-    if (jogador < 0 || jogador > 2) {
-        printf("Opcao invalida!\n");
-        return 1;
-    }
+        // Menu do jogo
+        printf("\n--- Jokenpo ---\n");
+        printf("1 - Pedra\n");
+        printf("2 - Papel\n");
+        printf("3 - Tesoura\n");
+        printf("Opcao: ==> ");
+        scanf("%d", &jogador); // Lê a opção do jogador
 
-    // Computador escolhe entre 0, 1 ou 2
-    //cpu = rand() % 3; //esta divisão so serve se usar 0 1 2
-    
-    cpu = rand() % 3 + 1; //o RESULTADO 0 1 2 = ENTAO +1 = 1 2 3 
+        // Validação da entrada (só aceita 1, 2 ou 3)
+        if (jogador < 1 || jogador > 3) {
+            printf("Opcao invalida!\n");
+            continue; // Volta para o início do loop sem executar o resto
+        }
 
-    // Exibir escolhas
-    char *opcoes[] = {"Pedra", "Papel", "Tesoura"};
-    printf("Voce escolheu: %s\n", opcoes[jogador]);
-    printf("Computador escolheu: %s\n", opcoes[cpu]);
+        // Gera número aleatório entre 1 e 3 para o computador
+        cpu = rand() % 3 + 1;
 
-    // Lógica do jogo
-    if (jogador == cpu) {
-        printf("Empate!\n");
-    } 
-    else if ((jogador == 0 && cpu == 2) || // Pedra ganha de Tesoura
-             (jogador == 1 && cpu == 0) || // Papel ganha de Pedra
-             (jogador == 2 && cpu == 1)) { // Tesoura ganha de Papel
-        printf("Voce venceu!\n");
-    } 
-    else {
-        printf("Computador venceu!\n");
-    }
+        // Exibe as escolhas
+        // -1 porque o vetor começa no índice 0
+        printf("Voce escolheu: %s\n", opcoes[jogador - 1]);
+        printf("Computador escolheu: %s\n", opcoes[cpu - 1]);
 
-    return 0;
+        // Lógica do jogo
+        if (jogador == cpu) {
+            printf("Empate!\n");
+        } 
+        // Condições de vitória do jogador
+        else if ((jogador == 1 && cpu == 3) || // Pedra vence Tesoura
+                 (jogador == 2 && cpu == 1) || // Papel vence Pedra
+                 (jogador == 3 && cpu == 2)) { // Tesoura vence Papel
+            printf("Voce venceu!\n");
+        } 
+        // Caso contrário, o computador vence
+        else {
+            printf("Computador venceu!\n");
+        }
+
+        // Pergunta se o usuário deseja jogar novamente
+        printf("\nDeseja jogar novamente? (1=Sim / 0=Nao): ");
+        scanf("%d", &jogar_novamente);
+
+    } while (jogar_novamente == 1); // Repete enquanto for 1
+
+    // Mensagem final
+    printf("\n=======>>>> Fim do jogo!!!!!!\n");
+
+    return 0; // Indica que o programa terminou corretamente
 }
