@@ -5,8 +5,7 @@
 int main() {
 
     int jogador, cpu;           // Variáveis para armazenar escolha do jogador e do computador
-    int jogar_novamente;        // Controle do loop (se o usuário quer continuar)
-    int totjog=0, totemp=0, totcpu = 0; // variaver para o score do JOGO
+    int totjog = 0, totemp = 0, totcpu = 0; // variaver para o score do JOGO
 
     // Vetor de strings com as opções do jogo
     // Índices: 0 = Pedra | 1 = Papel | 2 = Tesoura
@@ -15,26 +14,41 @@ int main() {
     // Inicializa o gerador de números aleatórios com base no tempo atual
     srand(time(NULL));
 
-    // Início do loop (executa pelo menos uma vez)
-    do {
+    // LOOP CONTÍNUO (volta automaticamente ao menu)
+    while (1) {
 
         // PLACAR
         printf("\n--------------------- Jokenpo -----------------------\n");
-        //PLACAR COM 3 DÍGITOS
+
+        // PLACAR COM 3 DÍGITOS
         printf("Jogador: [%03d] | Empate: [%03d] | CPU: [%03d]\n", 
                 totjog, totemp, totcpu);
-        printf("-----------------------------------------------------\n"); 
-        // Menu do jogo           
+
+        printf("-----------------------------------------------------\n");
+
+        // Menu do jogo
         printf("1 - Pedra\n");
         printf("2 - Papel\n");
         printf("3 - Tesoura\n");
+        printf("0 - Sair\n"); // opção para encerrar o jogo
         printf("Opcao: ==> ");
-        scanf("%d", &jogador); // Lê a opção do jogador
+
+        // Lê a opção do jogador com validação
+        if (scanf("%d", &jogador) != 1) {
+            printf("Entrada invalida!\n");
+            while (getchar() != '\n'); // limpa buffer
+            continue; // volta ao menu
+        }
+
+        // Se escolher 0, encerra o jogo
+        if (jogador == 0) {
+            break;
+        }
 
         // Validação da entrada (só aceita 1, 2 ou 3)
         if (jogador < 1 || jogador > 3) {
             printf("Opcao invalida!\n");
-            continue; // Volta para o início do loop sem executar o resto
+            continue; // volta para o início do loop
         }
 
         // Gera número aleatório entre 1 e 3 para o computador
@@ -48,26 +62,21 @@ int main() {
         // Lógica do jogo
         if (jogador == cpu) {
             printf("Empate!\n");
-            totemp++;
+            totemp++; // incrementa empate
         } 
         // Condições de vitória do jogador
         else if ((jogador == 1 && cpu == 3) || // Pedra vence Tesoura
                  (jogador == 2 && cpu == 1) || // Papel vence Pedra
                  (jogador == 3 && cpu == 2)) { // Tesoura vence Papel
             printf("Voce venceu!\n");
-            totjog++;
+            totjog++; // incrementa vitória do jogador
         } 
         // Caso contrário, o computador vence
         else {
             printf("Computador venceu!\n");
-            totcpu++;
+            totcpu++; // incrementa vitória do computador
         }
-
-        // Pergunta se o usuário deseja jogar novamente
-        printf("\nDeseja jogar novamente? (1=Sim / 0=Nao): ");
-        scanf("%d", &jogar_novamente);
-
-    } while (jogar_novamente == 1); // Repete enquanto for 1
+    }
 
     // Mensagem final
     printf("\n=======>>>> Fim do jogo!!!!!!\n");
