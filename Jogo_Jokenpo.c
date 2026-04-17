@@ -61,20 +61,21 @@ int main() {
 
         // Lógica do jogo
         if (jogador == cpu) {
-            printf("Empate!\n");
+            printf("\033[33mEmpate!\033[0m\n"); // amarelo
             totemp++; // incrementa empate
         } 
         // Condições de vitória do jogador
         else if ((jogador == 1 && cpu == 3) || // Pedra vence Tesoura
                  (jogador == 2 && cpu == 1) || // Papel vence Pedra
                  (jogador == 3 && cpu == 2)) { // Tesoura vence Papel
-            printf("***  Voce venceu!!!!! ****\n");
+            printf("\033[32m*** Voce venceu!!!!! ***\033[0m\n"); // verde
+            printf("\a\a"); // DAR UM BEEP (pode não funcionar em todos os terminais)
             totjog++; // incrementa vitória do jogador
         } 
         // Caso contrário, o computador vence
         else {
-            printf("\033[32mVoce venceu!\033[0m\n"); \\ texto com COR vermelha
-            printf("\a\a"); \\ DAR UM BEEP
+            printf("\033[31m*** Computador venceu! ***\033[0m\n"); // vermelho
+            printf("\a\a"); // DAR UM BEEP (pode não funcionar em todos os terminais)
             totcpu++; // incrementa vitória do computador
         }
     }
