@@ -6,7 +6,7 @@ int main() {
 
     int jogador, cpu;           // Variáveis para armazenar escolha do jogador e do computador
     int jogar_novamente;        // Controle do loop (se o usuário quer continuar)
-    int totjog, totemp, totcpu = 0; // variaver para o score do JOGO
+    int totjog=0, totemp=0, totcpu = 0; // variaver para o score do JOGO
 
     // Vetor de strings com as opções do jogo
     // Índices: 0 = Pedra | 1 = Papel | 2 = Tesoura
@@ -18,11 +18,13 @@ int main() {
     // Início do loop (executa pelo menos uma vez)
     do {
 
-        // Menu do jogo
+        // PLACAR
         printf("\n--------------------- Jokenpo -----------------------\n");
-        printf("\n**Total Jogador=[%d] ** Empate [%d] ** Total Computador [%d] ***" );
-        scanf("%d%d%d", &totjog, &totemp, &totcpu);
-        printf("\n-----------------------------------------------------\n");        
+        //PLACAR COM 3 DÍGITOS
+        printf("Jogador: [%03d] | Empate: [%03d] | CPU: [%03d]\n", 
+                totjog, totemp, totcpu);
+        printf("-----------------------------------------------------\n"); 
+        // Menu do jogo           
         printf("1 - Pedra\n");
         printf("2 - Papel\n");
         printf("3 - Tesoura\n");
@@ -46,16 +48,19 @@ int main() {
         // Lógica do jogo
         if (jogador == cpu) {
             printf("Empate!\n");
+            totemp++
         } 
         // Condições de vitória do jogador
         else if ((jogador == 1 && cpu == 3) || // Pedra vence Tesoura
                  (jogador == 2 && cpu == 1) || // Papel vence Pedra
                  (jogador == 3 && cpu == 2)) { // Tesoura vence Papel
             printf("Voce venceu!\n");
+            totjog++
         } 
         // Caso contrário, o computador vence
         else {
             printf("Computador venceu!\n");
+            totcpu++
         }
 
         // Pergunta se o usuário deseja jogar novamente
