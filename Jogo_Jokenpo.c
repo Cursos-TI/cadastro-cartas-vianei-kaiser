@@ -6,6 +6,7 @@ int main() {
 
     int jogador, cpu;           // Variáveis para armazenar escolha do jogador e do computador
     int jogar_novamente;        // Controle do loop (se o usuário quer continuar)
+    int totjog, totemp, totcpu = 0; // variaver para o score do JOGO
 
     // Vetor de strings com as opções do jogo
     // Índices: 0 = Pedra | 1 = Papel | 2 = Tesoura
@@ -18,7 +19,10 @@ int main() {
     do {
 
         // Menu do jogo
-        printf("\n--- Jokenpo ---\n");
+        printf("\n--------------------- Jokenpo -----------------------\n");
+        printf("\n**Total Jogador=[%d] ** Empate [%d] ** Total Computador [%d] ***" );
+        scanf("%d%d%d", &totjog, &totemp, &totcpu);
+        printf("\n-----------------------------------------------------\n");        
         printf("1 - Pedra\n");
         printf("2 - Papel\n");
         printf("3 - Tesoura\n");
