@@ -48,19 +48,19 @@ int main() {
         // Lógica do jogo
         if (jogador == cpu) {
             printf("Empate!\n");
-            totemp++
+            totemp++;
         } 
         // Condições de vitória do jogador
         else if ((jogador == 1 && cpu == 3) || // Pedra vence Tesoura
                  (jogador == 2 && cpu == 1) || // Papel vence Pedra
                  (jogador == 3 && cpu == 2)) { // Tesoura vence Papel
             printf("Voce venceu!\n");
-            totjog++
+            totjog++;
         } 
         // Caso contrário, o computador vence
         else {
             printf("Computador venceu!\n");
-            totcpu++
+            totcpu++;
         }
 
         // Pergunta se o usuário deseja jogar novamente
